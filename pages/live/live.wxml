@@ -1,0 +1,60 @@
+<view class="live">
+  <view class="schedule-title">
+    <view class="live-title-inner">
+      <view selectable="{{true}}" class="title-txt">2018京东云合作伙伴大会</view>
+       <view selectable="{{true}}" class="title-txt">主论坛直播回放</view>
+    </view>
+  </view>
+  <view class="live-player-view">
+    <!-- <live-player id="player" src="rtmp://jdpull.jd.com/live/249128" mode="live" autoplay bindstatechange="statechange" binderror="error">
+      <cover-view class='control {{fullScreen ? "active" : ""}}'>
+        <cover-image src='../imgs/live-play.png' wx:if="{{state == 'pause'}}"  bindtap="bindPlay"></cover-image>
+        <cover-image src='../imgs/live-pause.png' wx:if="{{state == 'play'}}"  bindtap="bindPause"></cover-image>
+        <cover-image src='../imgs/live-fullscreen.png' wx:if="{{!fullScreen}}"  bindtap="bindFullScreen"></cover-image>
+        <cover-image src='../imgs/live-exit-fullscreen.png' wx:if="{{fullScreen}}"  bindtap="exitFullscreen"></cover-image>
+      </cover-view>
+    </live-player> -->
+    <video autoplay='true' id='cur_video' src='https://jdc-static.oss.cn-north-1.jcloudcs.com/jdc-about-static/jdc-partner/jdc-partner.mp4' custom-cache="{{false}}"></video>
+  </view>
+  <view class="schedule_section">
+    <view class="schedule_section_item">
+      <view class="schedule_section_item_inner">
+        <view class="schedule_section_item_inner_bg"></view>
+        <text selectable="{{true}}" class='schedule_section_item_inner_label'>01</text>
+        <view class='schedule_section_item_inner_main'>
+          <text selectable="{{true}}" class="schedule_section_item_inner_text">09:55-10:00</text>
+          <text selectable="{{true}}" class="schedule_section_item_inner_text bottom spec">开场秀</text>
+        </view>
+      </view>
+      <view class="schedule_section_item_inner">
+        <view class="schedule_section_item_inner_bg"></view>
+        <text selectable="{{true}}" class='schedule_section_item_inner_label'>02</text>
+        <view class='schedule_section_item_inner_main'>
+          <text selectable="{{true}}" class="schedule_section_item_inner_text">10:00-11:10</text>
+          <text selectable="{{true}}" class="schedule_section_item_inner_text bottom spec">主题演讲</text>
+          <text selectable="{{true}}" class="schedule_section_item_inner_text bottom speaker">《科技创新时代 , 以合作赢未来》</text>
+        </view>
+      </view>
+    </view>
+    <view class="schedule_section_item">
+      <view class="schedule_section_item_inner">
+        <view class="schedule_section_item_inner_bg"></view>
+        <text selectable="{{true}}" class='schedule_section_item_inner_label'>03</text>
+        <view class='schedule_section_item_inner_main'>
+          <text selectable="{{true}}" class="schedule_section_item_inner_text">11:10-11:20</text>
+          <text selectable="{{true}}" class="schedule_section_item_inner_text bottom spec">京东云物联网产业联盟</text>
+          <text selectable="{{true}}" class="schedule_section_item_inner_text bottom speaker">成立仪式</text>
+        </view>
+      </view>
+      <view class="schedule_section_item_inner">
+        <view class="schedule_section_item_inner_bg"></view>
+        <text selectable="{{true}}" class='schedule_section_item_inner_label'>04</text>
+        <view class='schedule_section_item_inner_main'>
+          <text selectable="{{true}}" class="schedule_section_item_inner_text">11:20-12:00</text>
+          <text selectable="{{true}}" class="schedule_section_item_inner_text bottom spec">高峰对话</text>
+          <text selectable="{{true}}" class="schedule_section_item_inner_text bottom speaker">《新生态  新气象》</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

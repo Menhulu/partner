@@ -1,0 +1,43 @@
+<!--pages/login/login.wxml-->
+<view>
+<button class='login-btn' bindtap='logOut'>退出</button>
+  <view class='login-top' src="https://events.jdcloud.com/images/banner1-m.jpg"></view>
+</view>
+<view class='login-content'>
+  <view class='login-content-title'>
+    <view class='login-content-title-inner'> 您选择参加的分论坛是：</view>
+  </view>
+  <view class='login-content-list'>
+    <view class='login-content-item'>
+      <span class="login-content-item-name">姓名</span>
+      <span class="login-content-item-cont">{{userInfo.Uname}}</span>
+    </view>
+    <view class='login-content-item'>
+      <span class="login-content-item-name">公司名称</span>
+      <span class="login-content-item-cont">{{userInfo.Company}}</span>
+    </view>
+    <view class='login-content-item'>
+      <span class="login-content-item-name">职务</span>
+      <span class="login-content-item-cont">{{userInfo.Postions}}</span>
+    </view>
+    <view class='login-content-item'>
+      <span class="login-content-item-name">邮箱</span>
+      <span class="login-content-item-cont">{{userInfo.Email}}</span>
+    </view>
+    <view class='login-content-item'>
+      <span class="login-content-item-name">手机</span>
+      <span class="login-content-item-cont">{{userInfo.Mobile}}</span>
+    </view>
+  </view>
+  <view class='login-ercode'>
+    <image class='login-ercode-img' src="{{ercodeSrc}}"></image>
+  </view>
+  <view class='login-buttom'>
+    <view class='login-buttom-item'>
+      <text>凭此二维码签到</text>
+    </view>
+    <view class='login-buttom-item'>
+      <text>请您妥善保存，以便参会签到使用。</text>
+    </view>
+  </view>
+</view>

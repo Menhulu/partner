@@ -1,0 +1,23 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/introduction/introduction",
+    "pages/schedule/schedule",    
+    "pages/guest/guest",
+    "pages/register/register",
+    "pages/partner/partner",
+    "pages/login/login",
+    "pages/download/download",
+    "pages/playvideo/playvideo",
+    "pages/questionnaire/questionnaire",
+    "pages/ques_address/ques_address",
+    "pages/live/live"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#292C3A",
+    "navigationBarTitleText": "京东云合作伙伴大会",
+    "navigationBarTextStyle":"white"
+  }
+}

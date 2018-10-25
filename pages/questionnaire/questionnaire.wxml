@@ -1,0 +1,124 @@
+<view class='questionnaire'>
+
+  <!--提交表单弹窗开始-->
+  <view class="modal-mask" bindtap="hideDownloadModal" catchtouchmove="preventTouchMove" wx:if="{{showConfirmModal}}"></view>
+  <view class="dl-modal-dialog" wx:if="{{showConfirmModal}}">
+    <view class="dl-modal-title">提示</view>
+    <view class="dl-modal-mid">
+      <image class="dl-modal-mid-img" src="../imgs/question_nogift.png"></image>
+      <view class="dl-modal-mid-txt">很遗憾 未能中奖 </view>
+      <view class="dl-modal-mid-txt">您可以点击下载大会相关资料 </view>
+    </view>
+    <view class='dl-modal-footer-view'>
+      
+      <navigator class="dl-modal-footer-confirm" url="../download/download" redirect="true">去下载</navigator>
+      <button class="dl-modal-footer-cancel" bindtap='closeDlDialog'>取消</button>
+    </view>
+  </view>
+  <!--提交表单弹窗结束-->
+
+  <view class="introduction-txt">
+    <view class="introduction-txt-title">
+      <view class="introduction-txt-title-inner">
+        <text class="introduction-txt-title-txt">有奖问卷调查</text>
+      </view>
+    </view>
+    <view class="introduction-txt-content">
+      <text>京东云（JD Cloud）是京东集团旗下的云计算综合服务提供商，拥有全球领先的云计算技术和完整的服务平台。
+问卷预计使用5分钟时间，请认真填写哦~</text>
+    </view>
+  </view>
+
+  <form bindsubmit="formSubmit">
+    <view class='questionnaire-form-item'>
+      <view class='questionnaire-form-item-title'>
+        1.您的联系方式或名片（必填）：
+      </view>
+      <view class='questionnaire-form-item-content'>
+        <text>姓名：</text>
+        <input class='' name="name" type='text' maxlength='50' data-val="name" bindinput='getInputValue' disabled='{{alreadyChoose}}' value='{{form.name}}' />
+      </view>
+      <view class='questionnaire-form-item-content'>
+        <text>手机：</text>
+        <input class='' name="phone" type='number' maxlength='11' data-val="phone" bindinput='getInputValue' disabled='{{alreadyChoose}}' value='{{form.phone}}' />
+      </view>
+      <view class='questionnaire-form-item-content'>
+        <text>公司名称：</text>
+        <input class='' name="company" type='text' maxlength='50' data-val="company" bindinput='getInputValue' disabled='{{alreadyChoose}}' value='{{form.company}}' />
+      </view>
+      <view class='questionnaire-form-item-content'>
+        <text>工作邮箱：</text>
+        <input class='' name="email" type='text' maxlength='50' data-val="email" bindinput='getInputValue' disabled='{{alreadyChoose}}' value='{{form.email}}' />
+      </view>
+    </view>
+    <view class='questionnaire-form-item'>
+      <view class='questionnaire-form-item-title'>
+        2. 您的职务是:(必选)
+      </view>
+      <view class='questionnaire-form-item-content'>
+        <radio-group class="radio-group" data-val="position" bindchange="radioChange">
+          <label class="radio" wx:for="{{positionList}}" wx:key="index">
+            <radio value="{{item.value}}" checked="{{item.checked}}" disabled='{{alreadyChoose}}' />{{item.value}}
+          </label>
+        </radio-group>
+
+      </view>
+    </view>
+    <view class='questionnaire-form-item'>
+      <view class='questionnaire-form-item-title'>
+        3.贵公司哪方面的云计算需求最为迫切?
+      </view>
+      <view class='questionnaire-form-item-content'>
+        <radio-group class="radio-group" data-val="part" bindchange="radioChange">
+          <label class="radio" wx:for="{{partList}}" wx:key="index">
+            <radio value="{{item.value}}" checked="{{item.checked}}" disabled='{{alreadyChoose}}' />{{item.value}}
+          </label>
+        </radio-group>
+
+      </view>
+    </view>
+    <view class='questionnaire-form-item'>
+      <view class='questionnaire-form-item-title'>
+        4. 贵公司计划何时部署上述场景?(必选)
+      </view>
+      <view class='questionnaire-form-item-content'>
+        <radio-group class="radio-group" data-val="time" bindchange="radioChange">
+          <label class="radio" wx:for="{{timeList}}" wx:key="index">
+            <radio value="{{item.value}}" checked="{{item.checked}}" disabled='{{alreadyChoose}}' />{{item.value}}
+          </label>
+        </radio-group>
+
+      </view>
+    </view>
+    <view class='questionnaire-form-item'>
+      <view class='questionnaire-form-item-title'>
+        5. 贵公司所属行业是：
+      </view>
+      <view class='questionnaire-form-item-content'>
+        <radio-group class="radio-group" data-val="industry" bindchange="radioChange">
+          <label class="radio" wx:for="{{industryList}}" wx:key="index">
+            <radio value="{{item.value}}" checked="{{item.checked}}" disabled='{{alreadyChoose}}' />{{item.value}}
+          </label>
+        </radio-group>
+
+      </view>
+    </view>
+    <view class='questionnaire-form-item'>
+      <view class='questionnaire-form-item-title'>
+        6.对于京东云的产品和服务，您有哪些具体需求或建议？（8到256字）
+      </view>
+      <view class='questionnaire-form-item-content'  wx:if='{{!alreadyConfirm}}' >
+        <textarea name="advice" maxlength='256' bindinput="bindTextAreaBlur" value='{{form.advice}}'disabled='{{alreadyChoose}}'></textarea>
+      </view>
+       <view class='questionnaire-form-richtext' wx:if='{{alreadyConfirm}}' >
+          <rich-text>{{form.advice}}</rich-text>
+        </view>
+    </view>
+
+    <view class='questionnaire-form-item'>
+      <button class='confirm-btn' type='default' bindtap='confirmForm'wx:if='{{!alreadyChoose}}' disabled='{{alreadyConfirm}}'>确定</button>
+    </view>
+
+  </form>
+
+</view>

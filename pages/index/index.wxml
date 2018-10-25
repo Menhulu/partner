@@ -1,0 +1,150 @@
+<!--index.wxml-->
+
+<view class="container">
+  <view class="container-up">
+    <view class='container-login'>
+      <button class='login-btn' bindtap='showLogin'>登录</button>
+    </view>
+     <view class='container-live' bindtap="bindViewTap" data-index="8">
+      <image class='live-btn' src="../imgs/video-btn.png" ></image> 
+    </view>
+    <!--登录弹窗开始-->
+    <view class="modal-mask" bindtap="hideLoginModal" catchtouchmove="preventTouchMove" wx:if="{{showLoginModal}}"></view>
+    <view class="modal-dialog" wx:if="{{showLoginModal}}">
+      <view class="modal-title">登录</view>
+      <view class='register-item'>
+        <text class='register-item-txt'>手机</text>
+        <input class='register-item-input' type='number' maxlength='11' value='{{form.mobile}}' bindinput='getPhoneValue' />
+      </view>
+      <view class='register-item'>
+        <text class='register-item-txt'>验证码</text>
+        <input class='register-item-input register-item-input-vcode' maxlength="6" bindinput='getVcodeValue' />
+        <button class='register-item-vcode' bindtap="sendLoginVCode" disabled="{{getVcodeMsgBtn}}">{{getVcodeMsg}}</button>
+      </view>
+      <!-- <view class='register-item'>
+        <text class='register-item-txt'>验证码</text>
+        <input class='register-item-input register-item-input-vcode' bindinput='getImgVcodeValue' />
+        <image  bindtap="sendImgLoginVCode" src="{{login_vcode_src}}" class="img-vcode"></image>
+      </view> -->
+      <view class="modal-footer">
+        <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+        <view class="btn-confirm" wx:if="{{loginBtn}}" data-goto="login" bindtap="onLogin" data-status="confirm">登录</view>
+        <view class="btn-confirm" wx:if="{{questionLoginBtn}}" data-goto="question" bindtap="onLogin" data-status="confirm">登录</view>
+      </view>
+    </view>
+    <!--登录弹窗结束-->
+
+    <!--资料下载弹窗开始-->
+    <view class="modal-mask" bindtap="hideDownloadModal" catchtouchmove="preventTouchMove" wx:if="{{showDownloadModal}}"></view>
+    <view class="dl-modal-dialog" wx:if="{{showDownloadModal}}">
+      <view class="dl-modal-title">提示</view>
+      <view class="dl-modal-mid">
+        <image class="dl-modal-mid-img" src="../imgs/download-inner.png"></image>
+        <view>
+          <text class="dl-modal-mid-txt">敬请期待</text>
+        </view>
+      </view>
+      <view>
+        <button class="dl-modal-footer" bindtap='closeDlDialog'>知道啦</button>
+      </view>
+    </view>
+    <!--资料下载弹窗结束-->
+
+  </view>
+
+  <view class="container-main">
+    <view class="container-main-top">
+      <view class="container-main-one">
+        <view class="container-main-one-item"  bindtap="bindViewTap" data-index="0">
+          <view class="container-main-one-item-inner">
+            <image class="container-main-one-item-img" src="{{img.index_introduction}}"></image>
+            <view class='container-main-one-item-txt'>
+              <text>活动介绍</text>
+            </view>
+          </view>
+
+          <!-- <button class="container-main-one-item-inner" bindgetuserinfo="bindGetUserInfo">
+            <image class="container-main-one-item-img" src="{{img.index_introduction}}"></image>
+            <view class='container-main-one-item-txt'>
+              <text>活动介绍</text>
+            </view>
+          </button> -->
+
+        </view>
+        <view class="container-main-one-item" bindtap="bindViewTap" data-index="1">
+          <view class="container-main-one-item-inner">
+            <image class="container-main-one-item-img" src="{{img.index_schedule}}"></image>
+            <view class='container-main-one-item-txt'>
+              <text>活动日程</text>
+            </view>
+          </view>
+        </view>
+        <view class="container-main-one-item" bindtap="bindViewTap" data-index="2">
+          <view class="container-main-one-item-inner">
+            <image class="container-main-one-item-img" src="{{img.index_guest}}"></image>
+            <view class='container-main-one-item-txt'>
+              <text>参会嘉宾</text>
+            </view>
+          </view>
+        </view>
+        <view class="container-main-one-item" bindtap="bindViewTap" data-index="3">
+          <view class="container-main-one-item-inner">
+            <image class="container-main-one-item-img" src="{{img.index_download}}"></image>
+            <view class='container-main-one-item-txt'>
+              <text>资料下载</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="container-main-two">
+        <view class="container-main-two-left">
+          <view class="container-main-two-left-item" bindtap="bindViewTap" data-index="4">
+            <view class="container-main-two-left-inner">
+              <image class="container-main-two-left-img" src="{{img.index_location}}"></image>
+              <view>
+                <text>活动地点</text>
+              </view>
+            </view>
+          </view>
+          <view class="container-main-two-left-item" bindtap="bindViewTap" data-index="5">
+            <view class="container-main-two-left-inner">
+              <image class="container-main-two-left-img" src="{{img.index_partner}}"></image>
+              <view>
+                <text>合作伙伴</text>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="container-main-two-right">
+          <view class="container-main-two-item-inner" bindtap="bindViewTap" data-index="6">
+            <view>
+              <image class="container-main-two-right-img" src="{{img.index_register}}"></image>
+              <view>
+                <text>注册报名</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="container-main-three">
+        <view class="container-main-three-inner" bindtap="bindViewTap" data-index="7">
+          <view>
+            <image class="container-main-three-img" src="{{img.index_question}}"></image>
+            <view class='container-main-three-text'><text>有奖问卷调查</text></view>
+          </view>
+        </view>
+      </view>
+       <!-- <view class="container-main-three">
+        <view class="container-main-three-inner" bindtap="bindViewTap" data-index="8">
+          <view>
+            <image class="container-main-three-img" src="{{img.index_question}}"></image>
+            <view class='container-main-three-text'><text>直播入口</text></view>
+          </view>
+        </view>
+      </view> -->
+    </view>
+    <view class='container-bottom'>
+      <text>预见无限可能</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,79 @@
+/* pages/login/login.wxss */
+
+.login-top {
+  width: 100%;
+  height: 350rpx;
+  background-image: url('https://events.jdcloud.com/images/banner1-m.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.login-btn {
+  width: 55px;
+  border: 1px solid #37bef0;
+  border-radius: 10px;
+  background: #fff;
+  font-size: 10px;
+  color: #37bef0;
+  right: 10px;
+  position: absolute;
+  margin-top: 5px;
+}
+
+.login-content {
+  background-image: url('https://events.jdcloud.com/images/m-banner04_86.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.login-content-title {
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.login-content-title-inner {
+  padding: 24rpx;
+}
+
+.login-content-list {
+  color: #fff;
+  margin: 0px 10px 30px;
+}
+
+.login-content-item {
+  border-bottom: 1px dashed #eee;
+  padding: 30rpx 0 20rpx;
+}
+
+.login-content-item-name {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.login-content-item-cont {
+  width: 70%;
+  text-align: center;
+  float: right;
+  font-size:16px;
+}
+
+.login-ercode {
+  display: flex;
+  justify-content: center;
+}
+
+.login-ercode-img {
+  width: 400rpx;
+  height: 400rpx;
+}
+
+.login-buttom-item {
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+}
+
+.login-buttom {
+  padding: 20px;
+}

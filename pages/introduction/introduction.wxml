@@ -1,0 +1,76 @@
+<!--pages/introduction/introduction.wxml-->
+<view class="introduction">
+
+  <!--提交表单弹窗开始-->
+  <view class="modal-mask" bindtap="hideDownloadModal" catchtouchmove="preventTouchMove" wx:if="{{showConfirmModal}}"></view>
+  <view class="dl-modal-dialog" wx:if="{{showConfirmModal}}">
+    <view class="dl-modal-title">提示</view>
+    <view class="dl-modal-mid">
+      <image class="dl-modal-mid-img" src="../imgs/gift.png"></image>
+      <view class="dl-modal-mid-txt">感谢您参与视频投票</view>
+      <view class="dl-modal-mid-txt">9月21日我们会短信通知获奖者</view>
+      <view class="dl-modal-mid-txt">并告知奖品领取信息</view>
+    </view>
+    <view>
+      <button class="dl-modal-footer" bindtap='closeDlDialog'>知道啦</button>
+    </view>
+  </view>
+  <!--提交表单弹窗结束-->
+
+  <view class="introduction-txt">
+    <view class="introduction-txt-title">
+      <view class="introduction-txt-title-inner">
+        <text class="introduction-txt-title-txt">活动介绍</text>
+      </view>
+    </view>
+    <view class="introduction-txt-content">
+      <text>在致力成为可托付的中国云服务首选品牌的道路上，京东云从未止步。从“行业挑战者”到“卓越表现者”，京东云一举跻身云计算一流服务商行列。秉承“开放、合作、共赢”的理念，京东云将在京举办“相加·创无限”合作伙伴大会，携手合作伙伴、行业大咖，共同探讨行业发展趋势、企业发展痛点、云生态体系构建及更多合作空间，以期共同创造无限价值！</text>
+    </view>
+
+  </view>
+  <view class="introduction-video">
+    <view class="introduction-txt-title">
+      <view class="introduction-txt-title-inner">
+        <text class="introduction-txt-title-txt">大会预热视频</text>
+      </view>
+    </view>
+    <!-- <view class="introduction-video-content">
+      <text>9月21日前参与视频投票，得票最多视频的投票者将在9月26日大会现场获得精美奖品1份。</text>
+    </view> -->
+
+    <view class='introduction-video-list'>
+      <view class='introduction-video-item' wx:for="{{video_list}}" wx:key="index" wx:for-item="video">
+        <!--<video>
+          <cover-view class="image-cnt" data-index="{{index}}" bindtap='playVideo'>
+            <cover-image class="cover-image" src="{{video.img_src}}" />
+          </cover-view>
+        </video>-->
+        <image src="{{video.img_src}}" data-index="{{index}}" bindtap='playVideo'></image>
+        <view class='video-subtitle'>
+          <text>{{video.title}}</text>
+        </view>
+      </view>
+    </view>
+    <!-- <view class='introduction-video-form'>
+      <view class='introduction-radio'>
+        <view class='video-form-title'>
+          <text>选择您最喜欢的视频</text>
+        </view>
+        <radio-group class="radio-group" bindchange="radioChange">
+          <label class="radio" wx:for="{{items}}" wx:key="index">
+            <radio value="{{item.name}}" checked="{{item.checked}}" disabled='{{alreadyChoose}}' />{{item.value}}
+          </label>
+        </radio-group>
+      </view>
+      <view class='introduction-video-item2' wx:if="{{!alreadyChoose}}">
+        <view class='video-form-title'>
+          <text>请填写手机号 现场凭此号领取奖品</text>
+        </view>
+        <input class='phone-input' type='number' maxlength='11' bindinput='getPhoneValue'></input>
+      </view>
+      <view>
+        <button class='confirm-btn' type='default' wx:if="{{!alreadyChoose}}" bindtap='confirmForm' disabled='{{alreadyConfirm}}'>确定</button>
+      </view>
+    </view> -->
+  </view>
+</view>

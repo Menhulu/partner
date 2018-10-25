@@ -1,0 +1,50 @@
+<!--pages/partner/partner.wxml-->
+<view class="partner-title">
+  <view class="partner-title-inner">
+    <text class="title-txt">合作伙伴</text>
+  </view>
+</view>
+<view class="partner-subtitle">
+  <view class="partner-subtitle-inner">
+    <text class="subtitle-txt">顶级合作伙伴</text>
+  </view>
+</view>
+<view class='partner1'>
+  <image class='partner1-img' src="../imgs/logo/intel_rgb_3000.jpg"></image>
+</view>
+<view class="partner-subtitle">
+  <view class="partner-subtitle-inner">
+    <text class="subtitle-txt">钻石合作伙伴</text>
+  </view>
+</view>
+<view class='partner-logo'>
+    <image class='partner2-img1' src="https://events.jdcloud.com/images/logo1.png"></image>
+    <image class='partner2-img2' src="https://events.jdcloud.com/images/logo2.png"></image>
+    <image class='partner2-img2' src="../imgs/logo/pinyou.jpg"></image>
+    <image class='partner2-img2' src="https://events.jdcloud.com/images/logo5.png"></image>
+    <image class='partner2-img3' src="../imgs/logo/nielsen.jpg"></image>
+    <image class='partner2-img4' src="https://events.jdcloud.com/images/logo9.png"></image>
+</view>
+<view class="partner-subtitle">
+  <view class="partner-subtitle-inner">
+    <text class="subtitle-txt">金牌合作伙伴</text>
+  </view>
+</view>
+<view  class='partner-logo'>
+  <image class='partner3-img1' src="../imgs/logo/smart.jpg"></image>
+  <image class='partner3-img2' src="../imgs/logo/tuopu.jpg"></image>
+  <image class='partner3-img1' src="../imgs/logo/talking.jpg"></image>
+  <image class='partner3-img3' src="../imgs/logo/baifendian.jpg"></image>
+  <image class='partner3-img4' src="../imgs/logo/taihuon.jpg"></image>
+</view>
+<view class="partner-subtitle">
+  <view class="partner-subtitle-inner">
+    <text class="subtitle-txt">大会直播媒体</text>
+  </view>
+</view>
+<view  class='partner-logo'>
+  <image class='partner2-img1' src="https://events.jdcloud.com/images/logo21.png"></image>
+  <image class='partner4-img2' src="https://events.jdcloud.com/images/logo22.png"></image>
+  <image class='partner4-img4' src="../imgs/logo/bite.png"></image>
+  <image class='partner4-img3' src="https://events.jdcloud.com/images/logo23.png"></image>
+</view>

@@ -1,0 +1,128 @@
+/* pages/live/live.wxss */
+@import "../schedule/schedule.wxss";
+
+.page-body-button {
+  margin-bottom: 30rpx;
+}
+
+.live-title-inner {
+  width: 100%;
+  background-image: url('https://jdc-static.oss.cn-north-1.jcloudcs.com/jdc-about-static/2018%25E4%25BA%25AC%25E4%25B8%259C%25E4%25BA%2591%25E5%2590%2588%25E4%25BD%259C%25E4%25BC%2599%25E4%25BC%25B4%25E5%25A4%25A7%25E4%25BC%259A%25E5%25B0%258F%25E7%25A8%258B%25E5%25BA%258F/live-title-bg.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 130rpx;
+  font-weight: 700;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title-txt {
+  width: 100%;
+  text-align: center;
+  font-size: 40rpx;
+  color: #fff;
+}
+
+.schedule-title {
+  margin: 0rpx;
+}
+
+.schedule_section {
+  margin-top: 60rpx;
+}
+
+.schedule_section_item {
+  margin-bottom: 30rpx;
+}
+
+.schedule_section_item_inner_text.bottom {
+  color: #fff;
+}
+
+.schedule_section_item_inner_bg {
+  z-index: 0;
+  background-image: url('http://jdc-static.oss.cn-north-1.jcloudcs.com/jdc-about-static/2018%25E4%25BA%25AC%25E4%25B8%259C%25E4%25BA%2591%25E5%2590%2588%25E4%25BD%259C%25E4%25BC%2599%25E4%25BC%25B4%25E5%25A4%25A7%25E4%25BC%259A%25E5%25B0%258F%25E7%25A8%258B%25E5%25BA%258F/live-content-bg.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 95rpx;
+}
+.schedule_section_item_inner_label{
+  line-height:95rpx;
+}
+.schedule_section_item_inner_text{
+  line-height:40rpx;
+
+}
+
+.schedule_section_item_inner_text {
+  color: #c1f6ff;
+  font-weight: normal;
+}
+
+.live-player-view {
+  display: flex;
+  justify-content: center;
+}
+
+.live {
+  min-height: 100vh;
+  background: linear-gradient(80deg, #0989c5 0, #995cb6 100%);
+}
+
+live-player {
+  width: 94%;
+  height: 430rpx;
+}
+
+video {
+  width: 94%;
+  height: 430rpx;
+}
+
+.controls {
+  position: relative;
+  top: 80%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 5%;
+}
+
+.time {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  line-height: 50px;
+}
+
+.img {
+  width: 35px;
+  height: 35px;
+  margin: 5px auto;
+}
+
+.control {
+  height: 50rpx;
+  background: #212330;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  bottom: 0rpx;
+  opacity:0.75;
+
+}
+
+.active {
+  height: 80rpx;
+  width: 100vw;
+}
+
+cover-image {
+  width: 30rpx;
+  margin: 0rpx 25rpx;
+  height: 30rpx;
+}

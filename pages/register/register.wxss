@@ -1,0 +1,159 @@
+/* pages/register/register.wxss */
+
+.register {
+  background: #00a8e6;
+  min-height: 100vh;
+}
+
+.register-title {
+  padding: 30rpx;
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.register-item {
+  width: 90%;
+  height: 55rpx;
+  background: #fff;
+  border-radius: 10rpx;
+  margin: 0 auto 32rpx;
+  padding: 20rpx 0;
+  position: relative;
+}
+
+.register-item-txt {
+  display: inline-block;
+  width: 25%;
+  height: 50rpx;
+  line-height: 50rpx;
+  border-right: 1px solid #d0d0d0;
+  color: #b8b8b8;
+  font-size: 0.8rem;
+  margin-left: 3%;
+  vertical-align: top;
+}
+
+.register-item-input {
+  display: inline-block;
+  border: none;
+  outline: none;
+  width: 63%;
+  height: 50rpx;
+  padding-left: 20rpx;
+  font-size: 15px;
+  -o-appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  color: #888;
+  vertical-align: top;
+  overflow: hidden;
+}
+
+.register-item-vcode {
+  position: absolute;
+  right: 10rpx;
+  top: 10rpx;
+  border: none;
+  outline: none;
+  height: 64rpx;
+  border-radius: 10rpx;
+  background: #f3f3f3;
+  color: #11b6ed;
+  font-size: 14px;
+  box-shadow: 0 0 5px #bbb;
+  cursor: pointer;
+  transition: all 0.3s;
+  opacity: 1;
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-item-input-vcode {
+  width: 40%;
+}
+
+.register-submit {
+  padding-bottom: 40rpx;
+}
+
+.register-submit-btn {
+  border: none;
+  outline: none;
+  width: 300rpx;
+  height: 80rpx;
+  border-radius: 4px;
+  background: #fff;
+  color: #11b6ed;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.picker-input {
+  position: relative;
+  top: 4rpx;
+}
+
+/*注册成功后页面开始*/
+
+.registerSuc-body {
+  background-image: url('https://events.jdcloud.com/images/m-banner04_86.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  min-height: 100vh;
+}
+
+.login-top {
+  width: 100%;
+  height: 282rpx;
+}
+
+.login-content-title {
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.login-content-title-inner {
+  padding: 20rpx;
+}
+
+.login-content-list {
+  color: #fff;
+  margin: 0px 20rpx 60rpx;
+  font-size: 14px;
+  padding-bottom: 32rpx;
+  border-bottom: 1px dashed #76ccf3;
+}
+
+.login-ercode {
+  display: flex;
+  justify-content: center;
+}
+
+.login-ercode-img {
+  width: 400rpx;
+  height: 400rpx;
+}
+
+.login-buttom-item {
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+}
+
+.login-buttom {
+  padding: 40rpx;
+}
+
+/*注册成功后页面结束*/

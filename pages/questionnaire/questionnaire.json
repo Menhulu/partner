@@ -1,0 +1,66 @@
+{
+  "localData": {
+    "items": [
+      {
+        "name": "Intel",
+        "value": "董事长/总裁/总经理",
+        "checked": false
+      },
+      {
+        "name": "Smart",
+        "value": "技术经理",
+        "checked": false
+      },
+      {
+        "name": "Nielsen",
+        "value": "CIO/CTO",
+        "checked": false
+      },
+      {
+        "name": "Shopex",
+        "value": "业务总监/经理",
+        "checked": false
+      },
+      {
+        "name": "Percent",
+        "value": "CFO",
+        "checked": false
+      },
+      {
+        "name": "Mapgoo",
+        "value": "老师",
+        "checked": false
+      },
+      {
+        "name": "TalkingData",
+        "value": "CXO",
+        "checked": false
+      },
+      {
+        "name": "TalkingData",
+        "value": "个人开发者",
+        "checked": false
+      },
+      {
+        "name": "TalkingData",
+        "value": "政府官员",
+        "checked": false
+      },
+      {
+        "name": "TalkingData",
+        "value": "学生",
+        "checked": false
+      },
+      {
+        "name": "TalkingData",
+        "value": "技术总监",
+        "checked": false
+      },
+      {
+        "name": "TalkingData",
+        "value": "其他",
+        "checked": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,699 @@
+<!--pages/schedule/schedule.wxml-->
+<scroll-view class="schedule_container" scroll-y scroll-top="{{scrollTop}}">
+  <view class="schedule-title">
+    <view class="schedule-title-inner">
+      <text selectable="{{true}}" class="title-txt">活动日程</text>
+    </view>
+  </view>
+  <view class="schedule_time_location">
+    <view class="schedule_time_location_left">
+      <image class="schedule_time_location_img" src="http://jdc-static.oss.cn-north-1.jcloudcs.com/jdc-about-static/jdc-partner/icon/icon_time.png"></image>
+      <view>
+        <text selectable="{{true}}" class="schedule_time_location_txt_bold">时间：</text>
+        <text selectable="{{true}}">2018年9月26日</text>
+      </view>
+    </view>
+    <view class="schedule_time_location_right">
+      <image class="schedule_time_location_img" src="http://jdc-static.oss.cn-north-1.jcloudcs.com/jdc-about-static/jdc-partner/icon/icon_location.png"></image>
+      <view>
+        <text selectable="{{true}}" class="schedule_time_location_txt_bold">地点：</text>
+        <text selectable="{{true}}">北京中国大饭店</text>
+      </view>
+    </view>
+  </view>
+  <view class="schedule_title">
+    <text selectable="{{true}}">上午.主论坛</text>
+  </view>
+  <view class="schedule_section">
+    <view class="schedule_section_item">
+      <view class="schedule_section_item_inner">
+        <view class="schedule_section_item_inner_bg"></view>
+        <text selectable="{{true}}" class='schedule_section_item_inner_label'>01</text>
+        <view class='schedule_section_item_inner_main'>
+          <text selectable="{{true}}" class="schedule_section_item_inner_text">09:30-09:55</text>
+          <text selectable="{{true}}" class="schedule_section_item_inner_text bottom">入场签到</text>
+        </view>
+      </view>
+      <view class="schedule_section_item_inner">
+        <view class="schedule_section_item_inner_bg"></view>
+        <text selectable="{{true}}" class='schedule_section_item_inner_label'>02</text>
+        <view class='schedule_section_item_inner_main'>
+          <text selectable="{{true}}" class="schedule_section_item_inner_text">09:55-10:00</text>
+          <text selectable="{{true}}" class="schedule_section_item_inner_text bottom">开场秀</text>
+        </view>
+      </view>
+    </view>
+    <view class="schedule_section_item">
+      <view class="schedule_section_item_inner">
+        <view class="schedule_section_item_inner_bg"></view>
+        <text selectable="{{true}}" class='schedule_section_item_inner_label'>03</text>
+        <view class='schedule_section_item_inner_main'>
+          <text selectable="{{true}}" class="schedule_section_item_inner_text">10:00-11:10</text>
+          <text selectable="{{true}}" class="schedule_section_item_inner_text bottom spec">主题演讲</text>
+          <text selectable="{{true}}" class="schedule_section_item_inner_text bottom spec_desc">《科技创时代，合作赢未来》</text>
+          <text selectable="{{true}}" class="schedule_section_item_inner_text bottom speaker">申元庆 京东云总裁          
+          黄晓南 品友互动创始人兼CEO
+          苏萌 百分点董事长兼CEO 
+          马子雅（Ziya Ma） 英特尔公司副总裁 数据和分析技术部总经理</text>
+        </view>
+      </view>
+      <view class="schedule_section_item_inner">
+        <view class="schedule_section_item_inner_bg"></view>
+        <text selectable="{{true}}" class='schedule_section_item_inner_label'>04</text>
+        <view class='schedule_section_item_inner_main'>
+          <text selectable="{{true}}" class="schedule_section_item_inner_text">11:10-11:20</text>
+          <text selectable="{{true}}" class="schedule_section_item_inner_text bottom spec">京东云物联网产业联盟成立仪式</text>
+        </view>
+      </view>
+    </view>
+    <view class="schedule_section_item">
+      <view class="schedule_section_item_inner">
+        <view class="schedule_section_item_inner_bg"></view>
+        <text selectable="{{true}}" class='schedule_section_item_inner_label'>05</text>
+        <view class='schedule_section_item_inner_main'>
+          <text selectable="{{true}}" class="schedule_section_item_inner_text">11:20-12:00</text>
+          <text selectable="{{true}}" class="schedule_section_item_inner_text bottom spec">高峰对话</text>
+          <text selectable="{{true}}" class="schedule_section_item_inner_text bottom spec_desc">《新生态 新气象》</text>
+          <text selectable="{{true}}" class="schedule_section_item_inner_text bottom speaker">主持人 ：高欣欣 将门CEO 
+          对话嘉宾 ：刘子豪 京东集团副总裁、京东云生态业务负责人 
+          冯中茜 万达集团信息中心常务副总经理 
+          张余 尼尔森网联董事长兼首席执行官
+          雷少东 180数字技术有限公司总裁 
+          徐全利 红杉宽带合伙人 
+          </text>
+        </view>
+      </view>
+      <view class="schedule_section_item_inner">
+        <view class="schedule_section_item_inner_bg"></view>
+        <text selectable="{{true}}" class='schedule_section_item_inner_label'>06</text>
+        <view class='schedule_section_item_inner_main'>
+          <text selectable="{{true}}" class="schedule_section_item_inner_text">中午</text>
+          <text selectable="{{true}}" class="schedule_section_item_inner_text bottom">VIP圆桌 & 自助午餐</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="schedule_title afternoon">
+    <text selectable="{{true}}">下午.分论坛</text>
+  </view>
+  <view class='schedule-main-box'>
+    <view class='schedule_item one {{showPointOne ? "active" : ""}}'>
+      <view class='schedule_item_header'>
+        <button class="scheduleitem_header_btn" bindtap="showPoint" data-type='showPointOne'>查看日程
+          <text selectable="{{true}}" class='scheduleitem_header_btn_arrow'></text>
+        </button>
+      </view>
+      <view class='schedule_item_content' hidden="{{!showPointOne}}">
+        <view class="schedule_section">
+          <view class="schedule_section_item">
+            <view class="schedule_section_item_inner">
+              <view class="schedule_section_item_inner_bg"></view>
+              <text selectable="{{true}}" class='schedule_section_item_inner_label'>01</text>
+              <view class='schedule_section_item_inner_main'>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text">13:30-14:00</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom">入场签到</text>
+              </view>
+            </view>
+            <view class="schedule_section_item_inner">
+              <view class="schedule_section_item_inner_bg"></view>
+              <text selectable="{{true}}" class='schedule_section_item_inner_label'>02</text>
+              <view class='schedule_section_item_inner_main'>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text">14:00-14:05</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom spec">主持人开场</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom speaker">杜宇甫</text>
+              </view>
+            </view>
+          </view>
+          <view class="schedule_section_item">
+            <view class="schedule_section_item_inner">
+              <view class="schedule_section_item_inner_bg"></view>
+              <text selectable="{{true}}" class='schedule_section_item_inner_label'>03</text>
+              <view class='schedule_section_item_inner_main'>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text">14:05-14:20</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom spec">开场致辞</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom speaker">刘怡 易观智库CEO</text>
+              </view>
+            </view>
+            <view class="schedule_section_item_inner">
+              <view class="schedule_section_item_inner_bg"></view>
+              <text selectable="{{true}}" class='schedule_section_item_inner_label'>04</text>
+              <view class='schedule_section_item_inner_main'>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text">14:20-14:40</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom spec">《Martech全球品牌 营销趋势》</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom speaker">韩微文 贝恩全球合伙人</text>
+              </view>
+            </view>
+          </view>
+          <view class="schedule_section_item">
+            <view class="schedule_section_item_inner">
+              <view class="schedule_section_item_inner_bg"></view>
+              <text selectable="{{true}}" class='schedule_section_item_inner_label'>05</text>
+              <view class='schedule_section_item_inner_main'>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text">14:40-15:00</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom spec">《京东云生态智能营销战略构想》</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom speaker">刘子豪 京东集团副总裁、京东云生态业务负责人 </text>
+              </view>
+            </view>
+            <view class="schedule_section_item_inner">
+              <view class="schedule_section_item_inner_bg"></view>
+              <text selectable="{{true}}" class='schedule_section_item_inner_label'>06</text>
+              <view class='schedule_section_item_inner_main'>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text">15:00-15:20</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom spec">《人工智能 赋能营销新时代》</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom speaker">曹玉骥 品友互动副总裁 </text>
+              </view>
+            </view>
+          </view>
+          <view class="schedule_section_item">
+            <view class="schedule_section_item_inner">
+              <view class="schedule_section_item_inner_bg"></view>
+              <text selectable="{{true}}" class='schedule_section_item_inner_label'>07</text>
+              <view class='schedule_section_item_inner_main'>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text">15:20-15:40</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom spec">《社交营销大数据的创新应用》</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom speaker">赵晨希   精硕科技副总裁</text>
+              </view>
+            </view>
+            <view class="schedule_section_item_inner">
+              <view class="schedule_section_item_inner_bg"></view>
+              <text selectable="{{true}}" class='schedule_section_item_inner_label'>08</text>
+              <view class='schedule_section_item_inner_main'>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text">15:40-16:00</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom spec">《高客单价行业的数字化营销获客》</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom speaker">何润 致趣百川CEO</text>
+              </view>
+            </view>
+          </view>
+          <view class="schedule_section_item">
+            <view class="schedule_section_item_inner">
+              <view class="schedule_section_item_inner_bg"></view>
+              <text selectable="{{true}}" class='schedule_section_item_inner_label'>09</text>
+              <view class='schedule_section_item_inner_main'>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text">16:00-16:15</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom spec">MarTech生态联盟启动仪式</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom speaker"></text>
+              </view>
+            </view>
+            <view class="schedule_section_item_inner">
+              <view class="schedule_section_item_inner_bg"></view>
+              <text selectable="{{true}}" class='schedule_section_item_inner_label'>10</text>
+              <view class='schedule_section_item_inner_main'>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text">16:15-17:15</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom spec">圆桌对话</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom spec_desc">《全链路打通营销路径，重新定义广告价值》</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom speaker">主持人：李焕民  京东云副总裁 
+                 对话嘉宾： 邢科春  玖悦数码CEO 
+                 章楠 百分点数据科学事业部 咨询与解决方案高级总监 
+                 尹晓峰 知而行董事长
+                 陈慧菱 京东云市场传播部高级总监</text>
+              </view>
+            </view>
+          </view>
+          <view class="schedule_section_item">
+            <view class="schedule_section_item_inner">
+              <view class="schedule_section_item_inner_bg"></view>
+              <text selectable="{{true}}" class='schedule_section_item_inner_label'>11</text>
+              <view class='schedule_section_item_inner_main'>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text">17:15-17:25</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom">抽奖环节</text>
+              </view>
+            </view>
+            <view class="schedule_section_item_inner">
+              <view class="schedule_section_item_inner_bg"></view>
+              <text selectable="{{true}}" class='schedule_section_item_inner_label'>12</text>
+              <view class='schedule_section_item_inner_main'>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text">17:25</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom">活动结束</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='schedule_item two {{showPointTwo ? "active" : ""}}'>
+      <view class='schedule_item_header'>
+        <button class="scheduleitem_header_btn" bindtap="showPoint" data-type='showPointTwo'>查看日程
+          <text selectable="{{true}}" class='scheduleitem_header_btn_arrow'></text>
+        </button>
+      </view>
+      <view class='schedule_item_content' hidden="{{!showPointTwo}}">
+        <view class="schedule_section">
+          <view class="schedule_section_item">
+            <view class="schedule_section_item_inner">
+              <view class="schedule_section_item_inner_bg"></view>
+              <text selectable="{{true}}" class='schedule_section_item_inner_label'>01</text>
+              <view class='schedule_section_item_inner_main'>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text">13:30-14:00</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom">入场签到</text>
+              </view>
+            </view>
+            <view class="schedule_section_item_inner">
+              <view class="schedule_section_item_inner_bg"></view>
+              <text selectable="{{true}}" class='schedule_section_item_inner_label'>02</text>
+              <view class='schedule_section_item_inner_main'>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text">14:00-14:05</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom spec">主持人开场</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom speaker">吴悦 </text>
+              </view>
+            </view>
+          </view>
+          <view class="schedule_section_item">
+            <view class="schedule_section_item_inner">
+              <view class="schedule_section_item_inner_bg"></view>
+              <text selectable="{{true}}" class='schedule_section_item_inner_label'>03</text>
+              <view class='schedule_section_item_inner_main'>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text">14:05-14:15</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom spec">京东云领导致辞</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom speaker">刘子豪 京东集团副总裁、京东云生态业务负责人</text>
+              </view>
+            </view>
+            <view class="schedule_section_item_inner">
+              <view class="schedule_section_item_inner_bg"></view>
+              <text selectable="{{true}}" class='schedule_section_item_inner_label'>04</text>
+              <view class='schedule_section_item_inner_main'>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text">14:15-14:25</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom spec">《智能物联，带来对美好生活的无限想象》</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom speaker">周炯 京东IoT事业部总经理 </text>
+              </view>
+            </view>
+          </view>
+          <view class="schedule_section_item">
+            <view class="schedule_section_item_inner">
+              <view class="schedule_section_item_inner_bg"></view>
+              <text selectable="{{true}}" class='schedule_section_item_inner_label'>05</text>
+              <view class='schedule_section_item_inner_main'>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text">14:25-14:40</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom spec">《京东云物联网战略布局》</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom speaker">张熠 京东云生态业务集团合作部总经理</text>
+              </view>
+            </view>
+            <view class="schedule_section_item_inner">
+              <view class="schedule_section_item_inner_bg"></view>
+              <text selectable="{{true}}" class='schedule_section_item_inner_label'>06</text>
+              <view class='schedule_section_item_inner_main'>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text">14:40-15:00</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom spec">《数据云集 智汇赋能》</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom speaker">张余 《智能物联，带来对美好生活的无限想象》</text>
+              </view>
+            </view>
+          </view>
+          <view class="schedule_section_item">
+            <view class="schedule_section_item_inner">
+              <view class="schedule_section_item_inner_bg"></view>
+              <text selectable="{{true}}" class='schedule_section_item_inner_label'>07</text>
+              <view class='schedule_section_item_inner_main'>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text">15:00-15:20</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom spec">《智能家居行业现状及发展趋势调研分析及预测》</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom speaker">葛涵涛 中国信通院IoT行业首席研究员</text>
+              </view>
+            </view>
+            <view class="schedule_section_item_inner">
+              <view class="schedule_section_item_inner_bg"></view>
+              <text selectable="{{true}}" class='schedule_section_item_inner_label'>08</text>
+              <view class='schedule_section_item_inner_main'>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text">15:20-15:40</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom spec">《Wlink 2.0 泛生态赋能》</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom speaker">朱剑 南京物联副总裁</text>
+              </view>
+            </view>
+          </view>
+          <view class="schedule_section_item">
+            <view class="schedule_section_item_inner">
+              <view class="schedule_section_item_inner_bg"></view>
+              <text selectable="{{true}}" class='schedule_section_item_inner_label'>09</text>
+              <view class='schedule_section_item_inner_main'>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text">15:40-16:00</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom spec">《5G大视频时代的新机遇》</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom speaker">刘斌 环球天成CEO</text>
+              </view>
+            </view>
+            <view class="schedule_section_item_inner">
+              <view class="schedule_section_item_inner_bg"></view>
+              <text selectable="{{true}}" class='schedule_section_item_inner_label'>10</text>
+              <view class='schedule_section_item_inner_main'>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text">16:00-16:20</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom spec">《云锁，开启智能家居场景入口》</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom speaker">黎宇 汇泰龙智能事业部总经理</text>
+              </view>
+            </view>
+          </view>
+          <view class="schedule_section_item">
+            <view class="schedule_section_item_inner">
+              <view class="schedule_section_item_inner_bg"></view>
+              <text selectable="{{true}}" class='schedule_section_item_inner_label'>11</text>
+              <view class='schedule_section_item_inner_main'>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text">16:20-16:40</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom spec">《智能物联，教育服务新时代》</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom speaker">李泱儒 SMART大中华区总经理</text>
+              </view>
+            </view>
+            <view class="schedule_section_item_inner">
+              <view class="schedule_section_item_inner_bg"></view>
+              <text selectable="{{true}}" class='schedule_section_item_inner_label'>12</text>
+              <view class='schedule_section_item_inner_main'>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text">16:40-17:20</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom spec">圆桌对话</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom spec_desc">《客户体验引领物联网本质》</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom speaker">主持人：董宇 中关村智能硬件产业联盟秘书长 
+                嘉宾： 张熠 京东云生态业务集团合作部总经理 
+                谢斐 麦谷CEO 
+                段恩传 长虹四川爱联科技有限公司 总经理 
+                陈渝阳 托普云农CEO 
+                李笠 Broadlink VP& To B事业部总经理</text>
+              </view>
+            </view>
+          </view>
+          <view class="schedule_section_item">
+            <view class="schedule_section_item_inner">
+              <view class="schedule_section_item_inner_bg"></view>
+              <text selectable="{{true}}" class='schedule_section_item_inner_label'>13</text>
+              <view class='schedule_section_item_inner_main'>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text">17:20-17:30</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom">抽奖环节</text>
+              </view>
+            </view>
+            <view class="schedule_section_item_inner">
+              <view class="schedule_section_item_inner_bg"></view>
+              <text selectable="{{true}}" class='schedule_section_item_inner_label'>14</text>
+              <view class='schedule_section_item_inner_main'>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text">17:30</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom">活动结束</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='schedule_item three {{showPointThree ? "active" : ""}}'>
+      <view class='schedule_item_header'>
+        <button class="scheduleitem_header_btn" bindtap="showPoint" data-type='showPointThree'>查看日程
+          <text selectable="{{true}}" class='scheduleitem_header_btn_arrow'></text>
+        </button>
+      </view>
+      <view class='schedule_item_content' hidden="{{!showPointThree}}">
+        <view class="schedule_section">
+          <view class="schedule_section_item">
+            <view class="schedule_section_item_inner">
+              <view class="schedule_section_item_inner_bg"></view>
+              <text selectable="{{true}}" class='schedule_section_item_inner_label'>01</text>
+              <view class='schedule_section_item_inner_main'>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text">13:30-14:00</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom">入场签到</text>
+              </view>
+            </view>
+            <view class="schedule_section_item_inner">
+              <view class="schedule_section_item_inner_bg"></view>
+              <text selectable="{{true}}" class='schedule_section_item_inner_label'>02</text>
+              <view class='schedule_section_item_inner_main'>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text">14:00-14:05</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom spec">主持人开场</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom speaker">王慧 将门合伙人 </text>
+              </view>
+            </view>
+          </view>
+          <view class="schedule_section_item">
+            <view class="schedule_section_item_inner">
+              <view class="schedule_section_item_inner_bg"></view>
+              <text selectable="{{true}}" class='schedule_section_item_inner_label'>03</text>
+              <view class='schedule_section_item_inner_main'>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text">14:05-14:15</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom spec">京东云人工智能领导致辞</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom speaker">梅涛 京东集团AI平台与研究部AI研究院副院长 </text>
+              </view>
+            </view>
+            <view class="schedule_section_item_inner">
+              <view class="schedule_section_item_inner_bg"></view>
+              <text selectable="{{true}}" class='schedule_section_item_inner_label'>04</text>
+              <view class='schedule_section_item_inner_main'>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text">14:15-14:25</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom spec">京东云领导致辞</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom speaker">刘子豪 京东集团副总裁、京东云生态负责人 </text>
+              </view>
+            </view>
+          </view>
+          <view class="schedule_section_item">
+            <view class="schedule_section_item_inner">
+              <view class="schedule_section_item_inner_bg"></view>
+              <text selectable="{{true}}" selectable="{{true}}" class='schedule_section_item_inner_label'>05</text>
+              <view class='schedule_section_item_inner_main'>
+                <text selectable="{{true}}" selectable="{{true}}" class="schedule_section_item_inner_text">14:25-14:45</text>
+                <text selectable="{{true}}" selectable="{{true}}" class="schedule_section_item_inner_text bottom spec">《人工智能促进医疗行业生态良性循环》</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom speaker">邓侃 复星集团AI首席科学家 </text>
+              </view>
+            </view>
+            <view class="schedule_section_item_inner">
+              <view class="schedule_section_item_inner_bg"></view>
+              <text selectable="{{true}}" class='schedule_section_item_inner_label'>06</text>
+              <view class='schedule_section_item_inner_main'>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text">14:45-15:05</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom spec">《人工智能处理器赋能未来》</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom speaker">吴强 地平线CTO </text>
+              </view>
+            </view>
+          </view>
+          <view class="schedule_section_item">
+            <view class="schedule_section_item_inner">
+              <view class="schedule_section_item_inner_bg"></view>
+              <text selectable="{{true}}" class='schedule_section_item_inner_label'>07</text>
+              <view class='schedule_section_item_inner_main'>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text">15:05-15:25</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom spec">《人工智能赢在维度》</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom speaker">陈雨强 第四范式 联合创始人 </text>
+              </view>
+            </view>
+            <view class="schedule_section_item_inner">
+              <view class="schedule_section_item_inner_bg"></view>
+              <text selectable="{{true}}" class='schedule_section_item_inner_label'>08</text>
+              <view class='schedule_section_item_inner_main'>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text">15:25-15:45</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom spec">《深度学习在企业级文本分析中的应用及实践》</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom speaker">苏海波 百分点首席算法科学家 </text>
+              </view>
+            </view>
+          </view>
+          <view class="schedule_section_item">
+            <view class="schedule_section_item_inner">
+              <view class="schedule_section_item_inner_bg"></view>
+              <text selectable="{{true}}" class='schedule_section_item_inner_label'>09</text>
+              <view class='schedule_section_item_inner_main'>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text">15:45-16:05</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom spec">《全国领先人工智能云平台-开创未来》</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom speaker">陈健 并行科技CEO </text>
+              </view>
+            </view>
+            <view class="schedule_section_item_inner">
+              <view class="schedule_section_item_inner_bg"></view>
+              <text selectable="{{true}}" class='schedule_section_item_inner_label'>10</text>
+              <view class='schedule_section_item_inner_main'>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text">16:05-16:25</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom spec">《希捷为AI引擎提供优质数据燃料》</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom speaker">农天使 希捷科技中国区云及新兴产业总监</text>
+              </view>
+            </view>
+          </view>
+          <view class="schedule_section_item">
+            <view class="schedule_section_item_inner">
+              <view class="schedule_section_item_inner_bg"></view>
+              <text selectable="{{true}}" class='schedule_section_item_inner_label'>11</text>
+              <view class='schedule_section_item_inner_main'>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text">16:25-16:40</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom spec">京东云产品介绍：京东云睿选</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom speaker">张熠 京东云生态业务集团合作部总经理 
+                张军 180数字技术有限公司媒介事业部总经理
+                </text>
+              </view>
+            </view>
+            <view class="schedule_section_item_inner">
+              <view class="schedule_section_item_inner_bg"></view>
+              <text selectable="{{true}}" class='schedule_section_item_inner_label'>12</text>
+              <view class='schedule_section_item_inner_main'>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text">16:40-17:20</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom spec">圆桌对话</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom spec_desc">《智能驾驶的今天与未来》</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom speaker">主持人 ：高欣欣 将门CEO 
+                对话嘉宾： 张磊 清智科技CEO 
+                刘智勇 真机智能CEO 
+                夏炎 Momenta 联合创始人、研发总监 
+                蔡锐 Deep Motion创始人</text>
+              </view>
+            </view>
+          </view>
+          <view class="schedule_section_item">
+            <view class="schedule_section_item_inner">
+              <view class="schedule_section_item_inner_bg"></view>
+              <text selectable="{{true}}" class='schedule_section_item_inner_label'>13</text>
+              <view class='schedule_section_item_inner_main'>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text">17:20-17:30</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom">抽奖环节</text>
+              </view>
+            </view>
+            <view class="schedule_section_item_inner">
+              <view class="schedule_section_item_inner_bg"></view>
+              <text selectable="{{true}}" class='schedule_section_item_inner_label'>14</text>
+              <view class='schedule_section_item_inner_main'>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text">17:30</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom">活动结束</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='schedule_item four {{showPointFour ? "active" : ""}}'>
+      <view class='schedule_item_header'>
+        <button class="scheduleitem_header_btn" bindtap="showPoint" data-type='showPointFour'>查看日程
+          <text selectable="{{true}}" class='scheduleitem_header_btn_arrow'></text>
+        </button>
+      </view>
+      <view class='schedule_item_content' hidden="{{!showPointFour}}">
+        <view class="schedule_section">
+          <view class="schedule_section_item">
+            <view class="schedule_section_item_inner">
+              <view class="schedule_section_item_inner_bg"></view>
+              <text selectable="{{true}}" class='schedule_section_item_inner_label'>01</text>
+              <view class='schedule_section_item_inner_main'>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text">13:30-14:00</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom">入场签到</text>
+              </view>
+            </view>
+            <view class="schedule_section_item_inner">
+              <view class="schedule_section_item_inner_bg"></view>
+              <text selectable="{{true}}" class='schedule_section_item_inner_label'>02</text>
+              <view class='schedule_section_item_inner_main'>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text">14:00-14:05</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom spec">主持人开场</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom speaker">盛蓓蒂 主持人开场 </text>
+              </view>
+            </view>
+          </view>
+          <view class="schedule_section_item">
+            <view class="schedule_section_item_inner">
+              <view class="schedule_section_item_inner_bg"></view>
+              <text selectable="{{true}}" class='schedule_section_item_inner_label'>03</text>
+              <view class='schedule_section_item_inner_main'>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text">14:05-14:35</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom spec">《让城市生活更简单美好》</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom speaker">杜正平 京东集团副总裁、京东云公共业务部负责人  </text>
+              </view>
+            </view>
+            <view class="schedule_section_item_inner">
+              <view class="schedule_section_item_inner_bg"></view>
+              <text selectable="{{true}}" class='schedule_section_item_inner_label'>04</text>
+              <view class='schedule_section_item_inner_main'>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text">14:35-14:50</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom spec">《京东智臻链与数字城市》</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom speaker">杨平 京东集团副总裁、Y事业部总裁 </text>
+              </view>
+            </view>
+          </view>
+          <view class="schedule_section_item">
+            <view class="schedule_section_item_inner">
+              <view class="schedule_section_item_inner_bg"></view>
+              <text selectable="{{true}}" selectable="{{true}}" class='schedule_section_item_inner_label'>05</text>
+              <view class='schedule_section_item_inner_main'>
+                <text selectable="{{true}}" selectable="{{true}}" class="schedule_section_item_inner_text">14:50-15:05</text>
+                <text selectable="{{true}}" selectable="{{true}}" class="schedule_section_item_inner_text bottom spec">《英特尔助力构建智能城市》</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom speaker">张宇 英特尔中国物联网事业部首席技术官</text>
+              </view>
+            </view>
+            <view class="schedule_section_item_inner">
+              <view class="schedule_section_item_inner_bg"></view>
+              <text selectable="{{true}}" class='schedule_section_item_inner_label'>06</text>
+              <view class='schedule_section_item_inner_main'>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text">15:05-15:20</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom spec">《位置大数据在智能城市落地》</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom speaker">石清华 四维图新数据科学家 </text>
+              </view>
+            </view>
+          </view>
+          <view class="schedule_section_item">
+            <view class="schedule_section_item_inner">
+              <view class="schedule_section_item_inner_bg"></view>
+              <text selectable="{{true}}" class='schedule_section_item_inner_label'>07</text>
+              <view class='schedule_section_item_inner_main'>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text">15:20-15:35</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom spec">《数智创变——大数据助力新型智能城市建设》</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom speaker">柳峰  TalkingData首席城市大数据架构师</text>
+              </view>
+            </view>
+            <view class="schedule_section_item_inner">
+              <view class="schedule_section_item_inner_bg"></view>
+              <text selectable="{{true}}" class='schedule_section_item_inner_label'>08</text>
+              <view class='schedule_section_item_inner_main'>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text">15:35-15:50</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom spec">《北明软件助力京东云智能城市》</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom speaker">熊岩海 北明软件副总裁</text>
+              </view>
+            </view>
+          </view>
+          <view class="schedule_section_item">
+            <view class="schedule_section_item_inner">
+              <view class="schedule_section_item_inner_bg"></view>
+              <text selectable="{{true}}" class='schedule_section_item_inner_label'>09</text>
+              <view class='schedule_section_item_inner_main'>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text">15:50-16:05</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom spec">《智慧照明，智能城市的重要窗口》</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom speaker">代明亮 浦东智能照明联合会秘书长</text>
+              </view>
+            </view>
+            <view class="schedule_section_item_inner">
+              <view class="schedule_section_item_inner_bg"></view>
+              <text selectable="{{true}}" class='schedule_section_item_inner_label'>10</text>
+              <view class='schedule_section_item_inner_main'>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text">16:05-16:20</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom spec">《激活城市大数据，赋能企业新时代》</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom speaker">卢卫国 神州数码软件工程院副院长</text>
+              </view>
+            </view>
+          </view>
+          <view class="schedule_section_item">
+            <view class="schedule_section_item_inner">
+              <view class="schedule_section_item_inner_bg"></view>
+              <text selectable="{{true}}" class='schedule_section_item_inner_label'>11</text>
+              <view class='schedule_section_item_inner_main'>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text">16:20-17:20</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom spec">圆桌对话</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom spec_desc">《无界生态，梦想成就未来》</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom speaker">主持人：盛蓓蒂 
+                对话嘉宾： 胡忠华 齐鲁晚报常务副总编辑、齐鲁融媒董事长
+                檀林 微软加速器北京 CEO
+                曹余 中国智慧城市科学研究会专家委员会秘书长
+                谢海波 京东云智能城市方案委员会主席
+                翟欣磊 京东区块链业务负责人
+                </text>
+              </view>
+            </view>
+            <view class="schedule_section_item_inner">
+              <view class="schedule_section_item_inner_bg"></view>
+              <text selectable="{{true}}" class='schedule_section_item_inner_label'>12</text>
+              <view class='schedule_section_item_inner_main'>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text">17:20-17:30</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom">星空计划启航仪式</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom speaker">谢海波 京东云智能城市方案委员会主席
+                熊岩海 北明软件副总裁
+                朱明华 国泰新点副总经理
+                赵静 思源政通副总裁
+                孙泽红 国脉互联副院长
+                谢更明 因特睿副总裁
+                丁源 研华科技物联网行业总经理
+                余中 经纶世纪CEO
+                郭强 北京乐农道总裁
+                </text>
+              </view>
+            </view>
+          </view>
+          <view class="schedule_section_item" style='width:50%' >
+            <view class="schedule_section_item_inner">
+              <view class="schedule_section_item_inner_bg"></view>
+              <text selectable="{{true}}" class='schedule_section_item_inner_label'>13</text>
+              <view class='schedule_section_item_inner_main'>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text">17:30</text>
+                <text selectable="{{true}}" class="schedule_section_item_inner_text bottom">活动结束</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>

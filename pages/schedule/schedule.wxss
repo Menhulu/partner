@@ -1,0 +1,264 @@
+/* pages/schedule/schedule.wxss */
+
+.schedule_container {
+  height: 100%;
+}
+
+.schedule-title {
+  margin: 40rpx auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40rpx;
+}
+
+.schedule-title-inner {
+  width: 80%;
+  background-image: url('https://events.jdcloud.com/images/tit-b.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 67rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 44rpx;
+  font-weight: 700;
+}
+
+.schedule_time_location_img {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+}
+
+.schedule_time_location {
+  display: flex;
+  font-size: 23rpx;
+  justify-content: center;
+  align-items: center;
+  color: #4f4f4f;
+  padding: 0 60rpx;
+}
+
+.schedule_time_location_left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.schedule_time_location_right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.schedule_time_location_txt_bold {
+  font-weight: 700;
+  font-size: 24rpx;
+}
+
+/* 上午主论坛 */
+
+.schedule_section_item {
+  display: flex;
+  padding: 0 35rpx;
+  margin-bottom: 60rpx;
+}
+
+.schedule_section_item:last-child {
+  margin-bottom: 75rpx;
+}
+
+.schedule_section_item_inner {
+  flex: 1;
+  display: flex;
+  position: relative;
+}
+
+.schedule_section_item_inner_bg {
+  background-image: url('http://jdc-static.oss.cn-north-1.jcloudcs.com/jdc-about-static/jdc-partner/icon/img_text_bg.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 128rpx;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index:-1;
+}
+
+.schedule_section_item_inner_text {
+  display: block;
+  text-align: center;
+  font-size: 26rpx;
+  font-weight: 700;
+  line-height: 64rpx;
+  color: #159df4;
+}
+
+.schedule_section_item_inner_text.bottom {
+  color: #555;
+  font-size: 25rpx;
+}
+
+.schedule_section_item_inner_text.bottom.spec {
+  margin-top: 16rpx;
+  line-height: 30rpx;
+}
+
+.schedule_section_item_inner_text.bottom.spec_desc {
+  line-height: 25rpx;
+  font-size: 22rpx;
+}
+
+.schedule_section_item_inner_label {
+  width: 92rpx;
+  height: 128rpx;
+  text-align: center;
+  line-height: 128rpx;
+  color: #fff;
+  font-size: 36rpx;
+  font-weight: 100;
+  display: inline-block;
+}
+
+.schedule_section_item_inner_main {
+  flex: 1;
+}
+
+.schedule_section_item_inner_text.bottom.speaker {
+  line-height: 25rpx;
+  font-size: 22rpx;
+  font-weight: normal;
+  margin-top:15rpx;
+}
+
+.schedule_title {
+  text-align: center;
+  font-size: 36rpx;
+  color: #38beef;
+  font-weight: 700;
+  height: 70rpx;
+  line-height: 70rpx;
+  background-image: url('http://jdc-static.oss.cn-north-1.jcloudcs.com/jdc-about-static/jdc-partner/icon/header01.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin: 36rpx 22rpx 68rpx;
+}
+
+.schedule_title.afternoon {
+  background-image: url('http://jdc-static.oss.cn-north-1.jcloudcs.com/jdc-about-static/jdc-partner/icon/header02.png');
+}
+
+.title-img {
+  height: 40px;
+  width: 100%;
+}
+
+.schedule-img {
+  width: 100%;
+  height: 940rpx;
+}
+
+.schedule-main-box {
+  margin-top: 40rpx;
+  overflow: hidden;
+}
+
+.schedule_item {
+  margin-bottom: 60rpx;
+}
+
+.schedule_item.active {
+  margin-bottom: 0;
+}
+
+.schedule_item.active .scheduleitem_header_btn {
+  color: #5c9df8;
+  background: #fff;
+}
+
+.schedule_item.active .scheduleitem_header_btn_arrow {
+  border-top: 2rpx solid #5c9df8;
+  border-right: 2rpx solid #5c9df8;
+  transform: rotate(-45deg);
+  top: 4rpx;
+}
+
+.schedule_item.two .schedule_item_header {
+  background-image: url('https://events.jdcloud.com/images/mobile-tit_02.png');
+}
+
+.schedule_item.three .schedule_item_header {
+  background-image: url('https://events.jdcloud.com/images/mobile-tit_03.png');
+}
+
+.schedule_item.four .schedule_item_header {
+  background-image: url('https://events.jdcloud.com/images/mobile-tit_04.png');
+}
+
+.schedule_item.one .schedule_item_content_img {
+  height: 1150rpx;
+}
+
+.schedule_item.two .schedule_item_content_img {
+  height: 1330rpx;
+}
+
+.schedule_item.three .schedule_item_content_img {
+  height: 1460rpx;
+}
+
+.schedule_item.four .schedule_item_content_img {
+  height: 1330rpx;
+}
+
+.schedule_item_header {
+  position: relative;
+  box-sizing: border-box;
+  margin: 0 20rpx;
+  height: 180rpx;
+  background-image: url('https://events.jdcloud.com/images/mobile-tit_01.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border-radius: 15rpx;
+  margin-bottom: 46rpx;
+}
+
+.scheduleitem_header_btn {
+  position: absolute;
+  top: 50%;
+  right: 30rpx;
+  transform: translateY(-50%);
+  width: 200rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  background: linear-gradient(to bottom right, #63c0e5, #ad4ddf);
+  color: #fff;
+  border-radius: 8rpx;
+  font-size: 24rpx;
+  transition: all 500ms;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.schedule_item_content_img {
+  width: 100%;
+  height: 1700rpx;
+}
+
+.scheduleitem_header_btn_arrow {
+  width: 10rpx;
+  height: 10rpx;
+  content: "";
+  border-top: 2rpx solid #fff;
+  border-right: 2rpx solid #fff;
+  transform: rotate(135deg);
+  margin-left: 12rpx;
+  position: relative;
+  top: -1rpx;
+  transition: all 0.5s;
+}

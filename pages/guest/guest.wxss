@@ -1,0 +1,65 @@
+/* pages/guest/guest.wxss */
+
+.guest {
+  min-height: 100vh;
+  background: #37bef0;
+  color: #fff;
+  padding: 40rpx;
+}
+
+.guest-title {
+  text-align: justify;
+  margin: 40rpx auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.guest-title-inner {
+  width: 80%;
+  background-image: url('https://events.jdcloud.com/images/tit-w.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 64rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.guest-content {
+  text-align: center;
+  font-size: 36rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.guest-item {
+  width: 50%;
+  margin-top:40rpx;
+
+}
+
+.guest-item-company {
+  font-size: 30rpx;
+}
+
+.guest-item-img {
+  position: relative;
+}
+
+.guest-item-img-bg {
+  width: 270rpx;
+  height: 270rpx;
+}
+
+.guest-item-img-tx {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 100%;
+  position: absolute;
+  top: 14%;
+  left: 20%;
+}
+.guest-item-position{
+  font-size:30rpx;
+}

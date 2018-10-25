@@ -1,0 +1,236 @@
+/* pages/introduction/introduction.wxss */
+
+.introduction {
+  min-height: 100vh;
+  background: #37bef0;
+  color: #fff;
+}
+
+.introduction-txt {
+  padding: 40rpx;
+  text-align: justify;
+}
+
+.introduction-txt-title {
+  margin: 40rpx auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.introduction-txt-title-inner {
+  width: 80%;
+  background-image: url('https://events.jdcloud.com/images/tit-w.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 64rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.introduction-txt-content {
+  margin-top: 40px;
+  font-size: 16px;
+}
+
+.title-img {
+  height: 40px;
+  width: 100%;
+}
+
+video {
+  width: 100%;
+  display: inline-block;
+  line-height: 0;
+  overflow: hidden;
+  position: relative;
+  margin-top: 20rpx;
+}
+
+.introduction-video {
+  padding: 30rpx 0rpx 40rpx 0rpx;
+}
+
+.introduction-video-subtitle {
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 100%;
+  background-image: linear-gradient(90deg, #e50778 0%, #3650a1 100%);
+  display: inline-block;
+  margin: 0rpx 20rpx;
+}
+
+.video-subtitle {
+  font-size: 14px;
+  margin:0rpx 20rpx 30rpx 20rpx;
+}
+
+.introduction-video-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.introduction-video-item {
+  width: 49%;
+}
+
+.introduction-video-item video {
+  height: 200rpx;
+}
+
+.introduction-video-item image {
+  width: 100%;
+  height: 210rpx;
+}
+
+.video-form-title {
+  margin: 20rpx 0;
+  font-size: 16px;
+}
+
+.introduction-video-form {
+  padding:10rpx 40rpx;
+}
+
+.introduction-radio {
+  margin-bottom: 30rpx;
+}
+
+.radio-group {
+  font-size: 14px;
+  display:flex;
+flex-wrap:wrap;
+}
+
+/*  重写 radio 样式  */
+
+.attr_value {
+  float: left;
+  margin-right: 20rpx;
+  position: relative;
+}
+
+.radio_label {
+  display: block;
+  padding: 0 24rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+
+/*radio默认样式重置*/
+
+.radio {
+  min-width:50%
+}
+
+radio .wx-radio-input {
+  border-radius: 3rpx;
+  height: 26rpx;
+  width: 26rpx;
+  margin-top: -4rpx;
+}
+
+radio .wx-radio-input.wx-radio-input-checked {
+  background-color: #fff;
+  border: 1rpx solid #fff;
+}
+
+radio .wx-radio-input.wx-radio-input-checked::before {
+  background-color: #fff;
+  border: 1rpx solid #fff;
+  color: #37bef0; /* 对勾颜色 白色 */
+}
+
+/*radio默认样式重置*/
+
+.phone-input {
+  display: inline-block;
+  border: 1rpx solid #fff;
+  color: #fff;
+  outline: none;
+  width: 100%;
+  height: 50rpx;
+  margin-bottom: 40rpx;
+  font-size: 15px;
+  -o-appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  vertical-align: top;
+}
+
+.confirm-btn {
+  background: #fff;
+  color: #333;
+  letter-spacing: 10rpx;
+}
+
+.introduction-video-content {
+  font-size: 16px;
+  padding: 20rpx;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 9000;
+  color: #fff;
+}
+
+.dl-modal-dialog {
+  width: 80%;
+  overflow: hidden;
+  position: fixed;
+  top: 15%;
+  left: 10%;
+  z-index: 9999;
+  background: #fff;
+  border-radius: 15rpx;
+  color: #333;
+}
+
+.dl-modal-title {
+  padding: 10px;
+  font-size: 22px;
+  border-bottom: 1px solid #aaa;
+  text-align: center;
+}
+
+.dl-modal-mid {
+  text-align: center;
+  padding: 30px;
+}
+
+.dl-modal-mid-img {
+  width: 300rpx;
+  height: 300rpx;
+}
+
+.dl-modal-mid-txt {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.dl-modal-footer {
+  background: linear-gradient(132deg, #0064b4, #62c6f2 100%);
+  background-size: 100% 100%;
+  margin: 0px 20px 20px;
+  color: #fff;
+}

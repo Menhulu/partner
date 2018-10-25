@@ -1,0 +1,119 @@
+/* pages/partner/partner.wxss */
+
+.partner-title {
+  margin: 40rpx auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40rpx;
+}
+
+.partner-subtitle {
+  margin: 40rpx auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.partner-title-inner {
+  width: 80%;
+  background-image: url('https://events.jdcloud.com/images/tit-b.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 64rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-img {
+  height: 40px;
+  width: 100%;
+}
+
+.title-txt {
+  font-size: 18px;
+  font-weight: bold;
+  color: #555;
+}
+
+.partner-subtitle-inner {
+  width: 65%;
+  background-image: url('https://events.jdcloud.com/images/banner_02_24.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.partner1 {
+  text-align: center;
+}
+
+.partner1-img {
+  height: 110rpx;
+  width: 170rpx;
+}
+
+.partner-logo {
+  width: auto;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.partner-logo image {
+  display: inline-block;
+  margin: 20rpx 40rpx;
+  width: 225rpx;
+}
+
+.partner-logo .partner2-img1 {
+  height: 43rpx;
+}
+
+.partner-logo .partner2-img2 {
+  height: 54rpx;
+}
+
+.partner-logo .partner2-img3 {
+  height: 37rpx;
+  margin-left: -20rpx;
+}
+
+.partner-logo .partner2-img4 {
+  width: 160rpx;
+  height: 110rpx;
+}
+
+.partner3-img1 {
+  height: 61rpx;
+}
+
+.partner3-img2 {
+  height: 41rpx;
+}
+
+.partner3-img3 {
+  height: 27rpx;
+}
+
+.partner-logo .partner3-img4 {
+  width: 182rpx;
+  height: 145rpx;
+}
+
+.partner4-img2 {
+  height: 52rpx;
+}
+
+.partner-logo .partner4-img3 {
+  width: 160rpx;
+  height: 90rpx;
+}
+
+.partner-logo .partner4-img4 {
+  height: 41rpx;
+  margin-left: -20rpx;
+}

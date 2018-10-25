@@ -1,0 +1,79 @@
+@import "../introduction/introduction.wxss";
+
+.questionnaire {
+  background: #37bef0;
+  color: #fff;
+}
+
+.questionnaire-form-item {
+  padding: 20rpx 40rpx;
+}
+
+.questionnaire-form-item-title {
+  font-size: 16px;
+  margin-bottom: 20rpx;
+}
+
+.questionnaire-form-item-content {
+  font-size: 14px;
+  display: flex;
+  padding: 10rpx;
+  align-items: center;
+}
+
+.questionnaire-form-item-content text {
+  width: 25%;
+}
+
+.questionnaire-form-item-content input {
+  width: 70%;
+  border: 1rpx solid #fff;
+  padding: 8rpx;
+}
+
+.questionnaire-form-item-content textarea {
+  border: 1rpx solid #fff;
+  width: 100%;
+}
+
+.questionnaire-form-richtext {
+  height: 300rpx;
+  width: 100%;
+  border: 1rpx solid;
+  font-size: 14px;
+}
+
+.confirm-btn {
+  background: #fff;
+  color: #333;
+  letter-spacing: 10rpx;
+  margin-bottom: 40rpx;
+}
+
+.dl-modal-footer-confirm {
+  background: linear-gradient(132deg, #0064b4, #62c6f2 100%);
+  background-size: 100% 100%;
+  margin: 0px 20px 20px;
+  color: #fff;
+  width: 40%;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  text-align: center;
+  border-radius: 10rpx;
+  align-items: center;
+  padding-top: 10px;
+  font-size: 16px;
+}
+
+.dl-modal-footer-cancel {
+  background: #aaa;
+  background-size: 100% 100%;
+  margin: 0px 20px 20px;
+  color: #fff;
+  width: 40%;
+  font-size: 16px;
+}
+
+.dl-modal-footer-view {
+  display: flex;
+}

@@ -1,0 +1,128 @@
+<!--pages/guest/guest.wxml-->
+<view class='guest'>
+  <view class="guest-title">
+    <view class="guest-title-inner">
+      <text class="guest-title-txt">参会嘉宾</text>
+    </view>
+  </view>
+  <view class='guest-content'>
+    <view class='guest-item'>
+      <view class='guest-item-img'>
+        <image class="guest-item-img-bg" src='https://events.jdcloud.com/images/ooo.png'></image>
+        <image class="guest-item-img-tx" src='https://events.jdcloud.com/images/jiabin/headimg1.jpg'></image>
+      </view>
+      <view class='guest-item-name'>申元庆</view>
+      <view class='guest-item-position'>京东云总裁</view>
+      <view class='guest-item-company'></view>
+    </view>
+     <view class='guest-item'>
+      <view class='guest-item-img'>
+        <image class="guest-item-img-bg" src='https://events.jdcloud.com/images/ooo.png'></image>
+        <image class="guest-item-img-tx" src='https://events.jdcloud.com/images/jiabin/headimg2.jpg'></image>
+      </view>
+      <view class='guest-item-name'>刘子豪</view>
+      <view class='guest-item-position'>京东集团副总裁</view>
+      <view class='guest-item-company'>京东云生态业务负责人</view>
+    </view>
+    <view class='guest-item'>
+      <view class='guest-item-img'>
+        <image class="guest-item-img-bg" src='https://events.jdcloud.com/images/ooo.png'></image>
+        <image class="guest-item-img-tx" src='https://events.jdcloud.com/images/jiabin/headimg13.jpg'></image>
+      </view>
+      <view class='guest-item-name'>杜正平</view>
+      <view class='guest-item-position'>京东集团副总裁</view>
+      <view class='guest-item-company'>京东云公共业务部负责人</view>
+    </view>
+    <view class='guest-item'>
+      <view class='guest-item-img'>
+        <image class="guest-item-img-bg" src='https://events.jdcloud.com/images/ooo.png'></image>
+        <image class="guest-item-img-tx" src='https://events.jdcloud.com/images/jiabin/headimg12.jpg'></image>
+      </view>
+      <view class='guest-item-name'>王培暖</view>
+      <view class='guest-item-position'>京东集团副总裁</view>
+      <view class='guest-item-company'>京东云战略合作部负责人</view>
+    </view>
+     <view class='guest-item'>
+      <view class='guest-item-img'>
+        <image class="guest-item-img-bg" src='https://events.jdcloud.com/images/ooo.png'></image>
+        <image class="guest-item-img-tx" src='https://events.jdcloud.com/images/jiabin/headimg3.jpg'></image>
+      </view>
+      <view class='guest-item-name'>苏萌</view>
+      <view class='guest-item-position'>百分点董事长兼CEO</view>
+      <view class='guest-item-company'></view>
+    </view>
+     <view class='guest-item'>
+      <view class='guest-item-img'>
+        <image class="guest-item-img-bg" src='https://events.jdcloud.com/images/ooo.png'></image>
+        <image class="guest-item-img-tx" src='https://events.jdcloud.com/images/jiabin/headimg4.jpg'></image>
+      </view>
+      <view class='guest-item-name'>黄晓南</view>
+      <view class='guest-item-position'>品友互动创始人兼CEO</view>
+      <view class='guest-item-company'></view>
+    </view>
+    <view class='guest-item'>
+      <view class='guest-item-img'>
+        <image class="guest-item-img-bg" src='https://events.jdcloud.com/images/ooo.png'></image>
+        <image class="guest-item-img-tx" src='https://events.jdcloud.com/images/jiabin/headimg5.jpg'></image>
+      </view>
+      <view class='guest-item-name'>马子雅（Ziya Ma）</view>
+      <view class='guest-item-position'>英特尔公司副总裁</view>
+       <view class='guest-item-company'>数据和分析技术部总经理</view>
+    </view>
+    <view class='guest-item'>
+      <view class='guest-item-img'>
+        <image class="guest-item-img-bg" src='https://events.jdcloud.com/images/ooo.png'></image>
+        <image class="guest-item-img-tx" src='https://events.jdcloud.com/images/jiabin/headimg6.jpg'></image>
+      </view>
+      <view class='guest-item-name'>贾国城</view>
+      <view class='guest-item-position'>博智深学教育科技有限公司董事长</view>
+      <view class='guest-item-company'></view>
+    </view>
+    <view class='guest-item'>
+      <view class='guest-item-img'>
+        <image class="guest-item-img-bg" src='https://events.jdcloud.com/images/ooo.png'></image>
+        <image class="guest-item-img-tx" src='https://events.jdcloud.com/images/jiabin/headimg7.jpg'></image>
+      </view>
+      <view class='guest-item-name'>冯中茜</view>
+      <view class='guest-item-position'>万达集团信息中心</view>
+      <view class='guest-item-company'>常务副总经理</view>
+    </view>
+    <view class='guest-item'>
+      <view class='guest-item-img'>
+        <image class="guest-item-img-bg" src='https://events.jdcloud.com/images/ooo.png'></image>
+        <image class="guest-item-img-tx" src='https://events.jdcloud.com/images/jiabin/headimg8.jpg'></image>
+      </view>
+      <view class='guest-item-name'>张余</view>
+      <view class='guest-item-position'>尼尔森网联董事长兼首席执行官</view>
+      <view class='guest-item-company'></view>
+    </view>
+    <view class='guest-item'>
+      <view class='guest-item-img'>
+        <image class="guest-item-img-bg" src='https://events.jdcloud.com/images/ooo.png'></image>
+        <image class="guest-item-img-tx" src='https://events.jdcloud.com/images/jiabin/headimg9.jpg'></image>
+      </view>
+      <view class='guest-item-name'>雷少东</view>
+      <view class='guest-item-position'>北京壹捌零整合营销</view>
+      <view class='guest-item-company'>传播集团总裁</view>
+    </view>
+    <view class='guest-item'>
+      <view class='guest-item-img'>
+        <image class="guest-item-img-bg" src='https://events.jdcloud.com/images/ooo.png'></image>
+        <image class="guest-item-img-tx" src='https://events.jdcloud.com/images/jiabin/headimg10.jpg'></image>
+      </view>
+      <view class='guest-item-name'>徐全利</view>
+      <view class='guest-item-position'>红杉宽带合伙人</view>
+      <view class='guest-item-company'></view>
+    </view>
+    <view class='guest-item'>
+      <view class='guest-item-img'>
+        <image class="guest-item-img-bg" src='https://events.jdcloud.com/images/ooo.png'></image>
+        <image class="guest-item-img-tx" src='https://events.jdcloud.com/images/jiabin/headimg11.jpg'></image>
+      </view>
+      <view class='guest-item-name'>高欣欣</view>
+      <view class='guest-item-position'>将门CEO</view>
+      <view class='guest-item-company'></view>
+    </view>
+
+  </view>
+</view>

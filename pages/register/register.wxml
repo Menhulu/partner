@@ -1,0 +1,89 @@
+<!--pages/register/register.wxml-->
+<form bindsubmit="formSubmit" wx:if="{{!registerSuc}}">
+  <view class='register'>
+    <view class='register-title'>
+      <text>注册报名</text>
+    </view>
+    <view class='register-form'>
+      <view class='register-item'>
+        <text class='register-item-txt'>姓名</text>
+        <input class='register-item-input' name="uname" type='text' maxlength='50' bindinput='getNameValue' />
+      </view>
+      <view class='register-item'>
+        <text class='register-item-txt'>公司名称</text>
+        <input class='register-item-input' name="company" type='text' maxlength='50' bindinput='getCompanyValue' />
+      </view>
+      <view class='register-item'>
+        <view class='register-item-txt'>职位</view>
+        <view class='register-item-input'>
+          <picker bindchange="getPostionsValue" value="{{postions_index}}" range="{{postions_list}}" name="postions">
+            <view class="picker-input">
+              {{postions_index>=0?postions_list[postions_index]:"请选择"}}
+            </view>
+          </picker>
+        </view>
+      </view>
+      <view class='register-item'>
+        <view class='register-item-txt'>所属行业</view>
+        <view class='register-item-input'>
+          <picker bindchange="getIndustryValue" value="{{industryIndex}}" range="{{industries}}" name="industry">
+            <view class="picker-input">
+              {{industryIndex>=0?industries[industryIndex]:"请选择"}}
+            </view>
+          </picker>
+        </view>
+      </view>
+      <view class='register-item'>
+        <view class='register-item-txt'>选择分论坛</view>
+        <view class='register-item-input'>
+          <picker bindchange="getLuntanValue" value="{{luntanIndex}}" range="{{luntans}}" name="luntan">
+            <view class="picker-input">
+              {{luntanIndex>=0?luntans[luntanIndex]:"请选择"}}
+            </view>
+          </picker>
+        </view>
+      </view>
+      <view class='register-item'>
+        <text class='register-item-txt'>邮箱</text>
+        <input class='register-item-input' name="email" maxlength="100" bindinput='getEmailValue' />
+      </view>
+      <view class='register-item'>
+        <text class='register-item-txt'>手机</text>
+        <input class='register-item-input' type='number' maxlength='11' value='{{form.mobile}}' bindinput='getPhoneValue' />
+      </view>
+      <view class='register-item'>
+        <text class='register-item-txt'>验证码</text>
+        <input class='register-item-input register-item-input-vcode' bindinput='getVcodeValue' />
+        <button class='register-item-vcode' bindtap="sendVCode" disabled="{{getVcodeMsgBtn}}">{{getVcodeMsg}}</button>
+      </view>
+      <view class="register-submit">
+        <button class='register-submit-btn' formType="submit">提交</button>
+      </view>
+    </view>
+  </view>
+</form>
+<view class="registerSuc-body" wx:if="{{registerSuc}}">
+  <view>
+    <image class='login-top' src="https://events.jdcloud.com/images/banner1-m.jpg"></image>
+  </view>
+  <view class='login-content'>
+    <view class='login-content-title'>
+      <view class='login-content-title-inner'> 您已经成功报名 2018 京东云合作伙伴大会！</view>
+    </view>
+    <view class='login-content-list'>
+    <view> <text>您选择参加的分论坛是：</text></view>
+      {{registerLutan}}
+    </view>
+    <view class='login-ercode'>
+      <image class='login-ercode-img' src="{{registerErcode}}"></image>
+    </view>
+    <view class='login-buttom'>
+      <view class='login-buttom-item'>
+        <text>凭此二维码签到</text>
+      </view>
+      <view class='login-buttom-item'>
+        <text>请您妥善保存，以便参会签到使用。</text>
+      </view>
+    </view>
+  </view>
+</view>

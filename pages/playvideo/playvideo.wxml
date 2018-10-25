@@ -1,0 +1,4 @@
+<!--pages/playvideo/playvideo.wxml-->
+<view>
+<video autoplay='true' id='cur_video' src='{{currentVideo.src}}' custom-cache="{{false}}"></video>
+</view>

@@ -1,0 +1,70 @@
+/* pages/ques_address/ques_address.wxss */
+@import "../introduction/introduction.wxss";
+
+.ques_address {
+  background: #37bef0;
+  color: #fff;
+  min-height: 100vh;
+}
+
+.ques_address_img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ques_address_img image {
+  height: 300rpx;
+  width: 550rpx;
+  margin-top: 100rpx;
+}
+
+.ques_address_form {
+  padding: 10rpx 40rpx;
+}
+
+.ques_address_form_item {
+  border-bottom: 1px solid;
+  display: flex;
+  font-size: 16px;
+  padding: 10rpx;
+  justify-content: space-between
+}
+
+.ques_address_form_item text {
+  width: 30%;
+}
+
+.ques_address_form_item input {
+width:70%;
+}
+
+.confirm-btn {
+  background: #fff;
+  color: #333;
+  letter-spacing: 10rpx;
+  margin:100rpx 0rpx 50rpx;
+}
+
+.ques_address_form_item3 {
+  border-bottom: 1px solid;
+  display: flex;
+  font-size: 16px;
+  padding: 10rpx;
+   justify-content: space-between
+}
+.ques_address_form_item3 picker{
+  width:70%;
+}
+.ques_address_form_item3 .picker{
+  height:40rpx;
+}
+.ques_address_form_item3 .picker text{
+  float: right
+}
+.ques_address_form_item4 {
+  border-bottom: 1px solid;
+  font-size: 16px;
+  padding: 10rpx;
+}
+
